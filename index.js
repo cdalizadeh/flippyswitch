@@ -15,4 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 io.on('connection', (socket) => {
     console.log('wow connection is recieve');
+    socket.on('flip', () => {
+        console.log('switch is flip');
+    });
 });
