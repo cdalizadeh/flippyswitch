@@ -1,9 +1,29 @@
 <html>
+    <head>
+        <style>
+            .center {
+                text-align: center;
+                font-family: Impact, Charcoal, sans-serif;
+                font-size: 32px;
+            }
+        </style>
+    </head>
     <body>
+        <div class="center">
+            <p>Flippy Switch</p>
+        </div>
+        <canvas class="center" id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+        </canvas>
         <div>
+            <br>
             <button type="button" onclick="flipSwitch()">Button!</button>
             <p id="paragraph"> On </p>
+            
         </div>
+
+        
+        
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
         <script>
