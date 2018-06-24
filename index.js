@@ -22,4 +22,9 @@ io.on('connection', (socket) => {
         flip = !flip;
         io.sockets.emit('switchFlipped', flip);
     });
+
+    socket.on('query', () => {
+        console.log('switch status queried');
+        socket.emit('currentSwitchStatus', flip);
+    });
 });
