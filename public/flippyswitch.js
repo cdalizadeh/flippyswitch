@@ -27,5 +27,19 @@ function receiveFlipEvent(data){
 }
 
 function updateSwitch(data){
-    document.getElementById('paragraph').textContent = data;
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var On = document.getElementById("On_switch");
+    var Off = document.getElementById("Off_switch");
+
+
+    if (data) {
+        ctx.drawImage(On, 0, 0)
+    }
+    else {
+        ctx.drawImage(Off, 0, 0)
+    }
+
 }

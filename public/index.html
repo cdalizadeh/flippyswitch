@@ -12,30 +12,20 @@
         <div class="center">
             <p>Flippy Switch</p>
         </div>
-        <canvas class="center" id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+
+        <img id="On_switch" width="440" height="805" src="On_switch.png" alt="the off">
+        <img id="Off_switch" width="440" height="801" src="Off_switch.png" alt="the off">
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <canvas class="center" id="myCanvas" width="440" height="805" style="border:1px solid #000000;" onclick="switchClicked()">
                 Your browser does not support the HTML5 canvas tag.
         </canvas>
-        <div>
-<<<<<<< HEAD
-            <br>
-            <button type="button" onclick="flipSwitch()">Button!</button>
-<<<<<<< HEAD
-            <p id="paragraph"> <script> flipSwitch() </script> </p>
-=======
-            <p id="paragraph"> On </p>
-            
->>>>>>> 81b1e846b210274679f4a0bb5661f07fa93a6268
-        </div>
 
-        
-        
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-=======
-            <button type="button" onclick="switchClicked()">Button!</button>
+        <button type="button" onclick="switchClicked()">Button!</button>
             <p id="paragraph"></p>
-        </div>
->>>>>>> c41a47d25a3038b1830ecf147f4fef406b175e2e
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
         <script src="./flippyswitch.js"></script>
     </body>
 </html>
+
