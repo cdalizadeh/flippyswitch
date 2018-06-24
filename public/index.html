@@ -1,22 +1,11 @@
 <html>
     <body>
         <div>
-            <button type="button" onclick="flipSwitch()">Button!</button>
+            <button type="button" onclick="switchClicked()">Button!</button>
             <p id="paragraph"> On </p>
         </div>
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
-        <script>
-            var socket = io();
-
-            socket.on('switchFlipped', (data) => {
-                console.log('henlo');
-                $('#paragraph').text(data);
-            });
-
-            function flipSwitch(){
-                socket.emit('flip');
-            }
-        </script>
+        <script src="./flippyswitch.js"></script>
     </body>
 </html>
