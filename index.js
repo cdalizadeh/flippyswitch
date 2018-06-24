@@ -14,12 +14,19 @@ server.listen(port, () => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 var flip = true;
+var totalFlips = 0;
 
 io.on('connection', (socket) => {
     console.log('wow connection is recieve');
     socket.on('flip', () => {
-        console.log('switch is flip');
         flip = !flip;
+        totalFlips++;
+        console.log("Total flips: " + totalFlips);
         io.sockets.emit('switchFlipped', flip);
+    });
+
+    socket.on('query', () => {
+        console.log('switch status queried');
+        socket.emit('currentSwitchStatus', flip);
     });
 });
