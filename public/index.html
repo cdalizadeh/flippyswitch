@@ -4,7 +4,10 @@
             .center {
                 text-align: center;
                 font-family: Impact, Charcoal, sans-serif;
-                font-size: 32px;
+                font-size: 48px;
+                font-weight: bold;
+                color: red;
+
             }
         </style>
     </head>
@@ -13,16 +16,16 @@
             <p>Flippy Switch</p>
         </div>
 
-        <img id="On_switch" width="440" height="805" src="On_switch.png" alt="the off">
-        <img id="Off_switch" width="440" height="801" src="Off_switch.png" alt="the off">
+        <img hidden id="On_switch" width="440" height="805" src="On_switch.png" alt="the off">
+        <img hidden id="Off_switch" width="440" height="801" src="Off_switch.png" alt="the off">
 
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <canvas class="center" id="myCanvas" width="440" height="805" style="border:1px solid #000000;" onclick="switchClicked()">
+        
+        <div class="center">
+        <canvas class="center" id="myCanvas" width="440" height="805" onclick="switchClicked()">
                 Your browser does not support the HTML5 canvas tag.
         </canvas>
-
-        <button type="button" onclick="switchClicked()">Button!</button>
-            <p id="paragraph"></p>
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
         <script src="./flippyswitch.js"></script>
