@@ -5,7 +5,7 @@ var app = express();
 var path = require('path');
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
-var port = 3000;
+var port = 8080;
 
 server.listen(port, () => {
     console.log("Server listening at port " + port);
