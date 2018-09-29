@@ -1,31 +1,20 @@
 <html>
     <head>
-        <style>
-            .center {
-                text-align: center;
-                font-family: Impact, Charcoal, sans-serif;
-                font-size: 48px;
-                font-weight: bold;
-                color: red;
-
-            }
-        </style>
+        <link rel="stylesheet" type="text/css"href="index.css">
+        <title>flippyswitch.com</title>
     </head>
     <body>
-        <div class="center">
-            <p>Flippy Switch</p>
-        </div>
-
-        <img hidden id="On_switch" width="440" height="805" src="On_switch.png" alt="the off">
-        <img hidden id="Off_switch" width="440" height="801" src="Off_switch.png" alt="the off">
-
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        
+        <h1 class="center">
+            Flippy Switch
+        </h1>
         <div class="center">
         <canvas class="center" id="myCanvas" width="440" height="805" onclick="switchClicked()">
                 Your browser does not support the HTML5 canvas tag.
         </canvas>
         </div>
+
+        <img hidden id="on_switch" width="440" height="805" src="on_switch.png" alt="The switch is on">
+        <img hidden id="off_switch" width="440" height="801" src="off_switch.png" alt="The switch is off">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
         <script src="./flippyswitch.js"></script>

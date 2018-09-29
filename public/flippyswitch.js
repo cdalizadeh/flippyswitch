@@ -1,3 +1,9 @@
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+var on = document.getElementById("on_switch");
+var off = document.getElementById("off_switch");
+
 var socket = io();
 socket.on('switchFlipped', receiveFlipEvent);
 socket.on('currentSwitchStatus', receiveSwitchStatus);
@@ -27,19 +33,11 @@ function receiveFlipEvent(data){
 }
 
 function updateSwitch(data){
-
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-
-    var On = document.getElementById("On_switch");
-    var Off = document.getElementById("Off_switch");
-
-
     if (data) {
-        ctx.drawImage(On, 0, 0)
+        ctx.drawImage(on, 0, 0)
     }
     else {
-        ctx.drawImage(Off, 0, 0)
+        ctx.drawImage(off, 0, 0)
     }
 
 }
