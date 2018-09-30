@@ -6,7 +6,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
 var path = require('path');
-var port = 3000;
+var port = 8080;
 
 server.listen(port, () => {
     console.log("Server listening at port " + port);
