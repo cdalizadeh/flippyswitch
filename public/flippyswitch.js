@@ -1,13 +1,12 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-
 var on = document.getElementById("on_switch");
 var off = document.getElementById("off_switch");
 
 var socket = io();
 socket.on('switchFlipped', receiveFlipEvent);
 socket.on('currentSwitchStatus', receiveSwitchStatus);
-querySwitchStatus();
+socket.on('connect', querySwitchStatus);
 
 function switchClicked(){
     console.log("switch has been clicked");
@@ -15,6 +14,7 @@ function switchClicked(){
 }
 
 function querySwitchStatus(){
+    console.log("querying switch status");
     socket.emit('query');
 }
 
